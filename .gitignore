@@ -1,0 +1,31 @@
+# Environment variables
+.env
+
+# Python Bytecode & Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Pipeline Logs
+logs/*.log
+
+# Local Datasets
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/rejected/*
+!data/rejected/.gitkeep
+
+# Pytest & IDEs
+.pytest_cache/
+.vscode/
+.idea/
+*.ipynb_checkpoints/
