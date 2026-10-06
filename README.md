@@ -17,6 +17,28 @@ This project uses a hotel booking dataset with:
 - Duplicate records
 - Inconsistent and invalid values
 
+
+```mermaid
+flowchart TD
+    A[Raw Hotel Booking CSV] --> B[AWS S3 - raw/]
+    B --> C[Python Extract]
+    C --> D[Transform & Clean]
+    D --> E[Data Validation]
+
+    E -->|Valid Records| F[Processed CSV]
+    E -->|Rejected Records| G[Rejected CSV + Reasons]
+
+    F --> H[AWS S3 - processed/]
+    G --> I[AWS S3 - rejected/]
+
+    F --> J[PostgreSQL Staging Table]
+    J --> K[Upsert into hotel_bookings]
+
+    K --> L[Analytical SQL Queries]
+    K --> M[Indexes + EXPLAIN ANALYZE]
+
+```
+
 The ETL pipeline performs:
 
 ```text
