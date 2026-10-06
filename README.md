@@ -1,4 +1,3 @@
-```markdown
 # Hotel Booking ETL Pipeline
 
 A simple end-to-end Data Engineering project built for an Associate Data Engineer technical assessment.
