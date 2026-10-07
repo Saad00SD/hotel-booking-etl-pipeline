@@ -39,31 +39,6 @@ flowchart TD
 
 ```
 
-The ETL pipeline performs:
-
-```text
-AWS S3 Raw Dataset
-        ↓
-      Extract
-        ↓
-      Clean
-        ↓
-    Transform
-        ↓
-     Validate
-        ↓
- ┌──────────────┐
- │              │
-Valid         Invalid
- │              │
- ▼              ▼
-PostgreSQL   Rejected CSV
- │              │
- ▼              ▼
-Analytics      AWS S3
-```
-
----
 
 ## 2. Technologies Used
 
@@ -817,29 +792,3 @@ PostgreSQL load:            successful
 Pipeline completed successfully.
 ====================================
 ```
-
----
-
-## 21. Running Tests
-
-Run:
-
-```bash
-pytest
-```
-
-The tests cover areas such as:
-
-- Transformation logic
-- Date creation
-- Revenue calculation
-- Validation rules
-- Rejection reasons
-- Booking ID generation
-- Duplicate ID protection
-
-
-
----
-
-er the requirements stated in the assessment, including the required scalability, scheduling, indexing and failure-handling explanations.
