@@ -1,6 +1,5 @@
 # Hotel Booking ETL Pipeline
 
-A simple end-to-end Data Engineering project built for an Associate Data Engineer technical assessment.
 
 The project extracts raw hotel booking data from AWS S3, cleans and transforms the data using Python, validates records, stores clean data in PostgreSQL, stores rejected records separately, and demonstrates analytical SQL queries and PostgreSQL query optimization.
 
